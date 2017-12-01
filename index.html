@@ -1,17 +1,49 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Rotation.js</title>
-    <script src="libraries/p5.js" type="text/javascript"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="libraries/p5.dom.js" type="text/javascript"></script>
-    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+	<title>ShaneTeX to LaTeX Converter</title>
 
-    <script src="sketch.js" type="text/javascript"></script>
 
-    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
-  </head>
-  <body>
-  </body>
+	<script src="https://www.educationperfect.com/controlpanel/libs/systemjs/0.19.47/system.src.min.js"></script>
+	<script src="https://www.educationperfect.com/controlpanel/v3.4.922/controlpanel/src/controlPanel/ControlPanel.js"></script>
+	<script src="https://www.educationperfect.com/controlpanel/v3.4.922/controlpanel/src/controlPanel/questionPreview/QuestionPreviewModule.js"></script>
+	<script src="https://www.educationperfect.com/controlpanel/v3.4.922/systemjs.config.js"></script>
+	<script src="converter.js"></script>
+
+
+	<style>
+		* { font-family: sans-serif }
+		h3 { margin: 1em 0 .4em; }
+		h6 { text-transform: uppercase; color: #999; margin: .4em 0 }
+		html { padding: 1em; }
+		textarea { width: 100%; height: 30vh; font-family: monospace; box-sizing: border-box }
+	</style>
+</head>
+
+<body>
+
+	<h3>Input (ShaneTeX)</h3>
+	<h6>One expression per line</h6>
+
+<textarea id="shanetex" disabled>
+sin(theta)=O/A
+k=√(b^2-4ac)
+E=mc^2
+
+A_(Total)={R+C+C+D}m^2
+a+b+c = {a+b+c}
+{a}+{b}+{c}
+{aaaaaa}+{bbbbbbb}+{c}</textarea>
+	<h3>Output (LaTeX)</h3>
+	<textarea id="latex" disabled>
+</textarea>
+
+
+</body>
+
 </html>
